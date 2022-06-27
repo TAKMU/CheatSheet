@@ -4,3 +4,5 @@ Check web page https://www.postgresql.org/download/ in case of different OS (Roc
 >sudo dnf update
 
 >sudo dnf install postgresql-server
+
+# Create Database Cluster
