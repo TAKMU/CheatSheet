@@ -35,3 +35,6 @@ Save and reload service
 Start postgres  
  >systenctl start postgresql
 </details>
+
+
+### Create Enter psql  
