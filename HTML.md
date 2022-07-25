@@ -1,16 +1,18 @@
 ### Estructura básica
 <details>
   
-> "<!DOCTYPE html>"  
+> \<!DOCTYPE html\>  
   
-> "<html>" 
+> \<html\> 
   
-> "<head>" 
+>   \<head\> 
   
->"</head>"
+>   \</head\>
 
-> "<body>"  "</body>"
+>   \<body\>  
+  
+>  \</body\>
 
-> "</html>"
+> \</html\>
 
 </details>
