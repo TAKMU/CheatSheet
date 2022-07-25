@@ -42,4 +42,16 @@ Un párrafo
 <br/>
  ```
 </details>
+
+  #### Formatos
+<details>
+
+```
+<b> Formatea el texto en negrita </b>
+  <strong> Formatea el texto en negrita y TIENE IMPORTANCIA SEMANTICA </strong>
+  <i> Formatea el texto en negrita y tiene importancia semántica </i>
+```
+</details>
   </details>
+  
+
