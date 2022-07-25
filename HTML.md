@@ -45,12 +45,21 @@ Un párrafo
 
   #### Formatos
 <details>
+  
+  <details><summary>Negritas</summary>
 
 ```
-<b> Formatea el texto en negrita </b>
+  <b> Formatea el texto en negrita </b>
   <strong> Formatea el texto en negrita y TIENE IMPORTANCIA SEMANTICA </strong>
-  <i> Formatea el texto en negrita y tiene importancia semántica </i>
 ```
+  </details>
+  <details><summary>Cursiva</summary>
+    
+```
+  <i> Formatea el texto en negrita y tiene importancia semántica </i>
+  <em> Formatea en itálica o cursiva y tiene importancia semántica </em>
+```
+  </details>
 </details>
   </details>
   
