@@ -16,3 +16,10 @@
 > \</html\>
 
 </details>
+
+### Para acentos
+<details>
+
+  > \<meta charset="utf-8"\>
+
+</details>
