@@ -61,6 +61,36 @@ Un párrafo
 ```
   </details>
 </details>
+
+  #### Atributos
+  <details>
+    width: anchura
+    height: altura
+  </details>
+  
+  #### Imagen
+  <details>
+    
+ *No necesita etiqueta de cierre, necesita una ruta de la imagen, y se le puede agregar los atributos width y height*  
+ 
+##### Atributos
+    
+<details>
+      
+  **width**, **height**, **src** (se explicaron en atributos y al inicio de seccion).  
+      **alt**: Texto alternativo  
+      **tittle**: Texto flotante al situarnos encima con el mouse  
+      
+</details>
+    
+    
+ ```
+ <img src=""/>
+ <img src=""/ alt="No se puede mostrar la imagen" title="imagen de gatitos">
+ ```
+ 
+    
+  </details>
   </details>
   
 
