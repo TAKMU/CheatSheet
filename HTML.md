@@ -109,4 +109,73 @@ Un párrafo
   ```
     
   </details>
+  
+  #### Listas
+  <details>
+    
+##### Listas ordenadas
+
+<details>
+
+  Crear listas ordenadas.
+      
+```   
+      <ol type="1">
+        <li value="1">Empieza con 1. </li>
+        <li>2.</li>
+        <li>3.</li>
+      </ol>
+```
+  
+  ###### Atributos
+  <details>
+    
+```
+    <ol start="number"> Define numero inicial, default es 1 o toma el equivalente en su numeración (2=b)</ol>
+    <ol type="A|a|1|I|i"> Define el tipo de numeración: alfabética, numeral, romano </ol>
+    <li value="number"> Define valor equivalente al tipo de numeracion por elemento de lista</li>
+```
+    
+  </details>
+
+      
+</details>
+    
+##### Listas desordenada
+   
+<details>
+  
+Unordered list es una lista sin prioridad u orden. Default es disk o circulo rellenado. 
+```
+  <ul>
+    <li> </li>
+  </ul>
+```
+*ATRIBUTOS*
+<details>
+  
+  type="circle|square|disk|none"
+</details>
+  
+</details>
+    
+##### Listas de definiciones
+   
+<details>
+  
+Definition list es lista para definiciones (parecido a un diccionario)
+```
+  <dl>
+    <dt>Termino que definiremos </dt>
+      <dd>1ra definicion    </dd>
+      <dd>2a definicion    </dd>
+    <dt>2o termino</dt>
+      <dd></dd>
+  </dl>
+```
+
+  
+</details>
+ 
+  </details>
   </details>
