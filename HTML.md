@@ -68,7 +68,12 @@ Un párrafo
     height: altura
   </details>
   
-  #### Imagen
+  </details>
+  
+### Elementos
+<details>
+  
+   #### Imagen
   <details>
     
  *No necesita etiqueta de cierre, necesita una ruta de la imagen, y se le puede agregar los atributos width y height*  
@@ -91,6 +96,17 @@ Un párrafo
  
     
   </details>
-  </details>
   
-
+  #### Enlace o link  
+  <details>  
+    
+  Conexión a información o documento al pulsar a este.  
+  Atributo esencial es **href** para indicar el destino.  
+    Atributo **target** indica como se abre el link.  (*target = "_blank"*, para abrir en otra pagina; existen otros más como *"_self"* para abrirla en la misma sección . *"_parent*, *"_top*", o *"framename"* para un marco en específico).  
+  ```
+  <a href="www.prueba-allan.ddnsfree.com"> </a>
+  <a target = "_blank" href="www.google.com"></a>
+  ```
+    
+  </details>
+  </details>
