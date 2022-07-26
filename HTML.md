@@ -43,6 +43,17 @@ Un párrafo
  ```
 </details>
 
+#### Contenedores
+  <details>
+  
+##### div
+
+    Nivel de bloque
+##### span
+
+    Nivel de linea
+  </details>
+  
   #### Formatos
 <details>
   
@@ -64,8 +75,14 @@ Un párrafo
 
   #### Atributos
   <details>
-    width: anchura
-    height: altura
+    
+*  **width**: anchura
+
+*  **height**: altura
+
+*  **id**: identificador único al elemento o etiqueta que se le aplique.
+
+*  **class**: identificador común a las etiquetas (plural), para aplicar estilos o interactividad
   </details>
   
   </details>
@@ -178,4 +195,44 @@ Definition list es lista para definiciones (parecido a un diccionario)
 </details>
  
   </details>
+  
+#### Tablas
+  
+<details>
+
+* tr=renglón
+* td="columna o entrada, celda"
+* th=encabezado, negritas
+  
+```
+  <table>
+    <tr>
+      <th>Encabezado</th>
+    </tr>
+    <tr> 
+      <td>"celda de columna", table data</td>
+    </tr>
+  </table>
+```
+**ATRIBUTOS**
+<details>
+  
+  <table>
+    <tr>
+      <th>Etiqueta</th>
+      <th>Atributo</th>
+      <th>Definicion</th>
+    </tr>
+    <tr>
+      <td rowspan="2"> td, tr </td>
+      <td> colspan="number" </td>
+      <td> Agrupar una celda con varias columnas </td>
+    </tr>
+    <tr>
+      <td> rowspan="number" </td>
+      <td> Agrupar una celda con varios renglones </td>
+    </tr>
+  </table>
+</details>
+</details>
   </details>
