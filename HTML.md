@@ -236,10 +236,24 @@ Definition list es lista para definiciones (parecido a un diccionario)
 </details>
 </details>
   
+#### Formularios
 <details>
   
+  Formularios para ingreso de datos de usuarios
 ```
-  <form></form>
+  <form action="http://destino.com" method="POST"/>
+    Nombre de Usuario: <input name="nombreUsuario" value="valor por defecto" type="text"><br> <!--texto-->
+    Estas vivo: <input name="status" type="checkbox" checked="checked" value="selecionada"> <!--checked selecciona la casilla por default, al mandar información manda el contenido de value.--> <br>
+    Quieres:<br>
+    Comer <input name="acciones" type="radio" value="comer"><br>
+    Dormir <input name="acciones" type="radio" value="dormir"><br>
+    Jugar <input name="acciones" type="radio" value="jugar"><br>
+    Password <input name="password" type="password">
+    Secreto <input name="secretos" type="hidden" value="nuevoDatoOculto">
+    Reset <input type="reset" value="restablecer o reiniciar">
+    Enviar <input type="submit" value="enviar">
+  </form>
 ```
-  <\details>
+  
+  </details>
   </details>
