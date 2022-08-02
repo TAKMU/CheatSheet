@@ -258,4 +258,20 @@ Definition list es lista para definiciones (parecido a un diccionario)
   </details>
   
 #### Listas desplegables
+
+<details>
+  
+Lista desplegable
+
+```
+<select name="lista" size=1 multiple>
+  <!-- multiple permite seleccionar más de uno, size es la cantidad de opciones que se muestran. -->
+  <option value="Sistemas" >Programacion</option>
+  <option value="Negocios" selected="selected">Administracion de empresas </option>
+  <!-- Selected va a ser el valor de default -->
+</select>
+```
+  
+
+</details>
   </details>
