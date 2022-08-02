@@ -256,7 +256,6 @@ Definition list es lista para definiciones (parecido a un diccionario)
 ```
   
   </details>
-  
 #### Listas desplegables
 
 <details>
@@ -270,8 +269,18 @@ Lista desplegable
   <option value="Negocios" selected="selected">Administracion de empresas </option>
   <!-- Selected va a ser el valor de default -->
 </select>
-```
-  
+```  
 
 </details>
+
+#### Area de texto
+<details>
+  
+```
+  <textarea name="nombre del elemento" value="default" cols=34 rows=2>
+    Numero de letras de ancho 34, y 2 lineas
+  </textarea>
+```
+</details>
+
   </details>
