@@ -21,6 +21,7 @@ Selector, conjunto de reglas utilizadas para apuntar a uno o varios elementos de
 Apuntan a etiquetas HTML, apuntan a etiquetas en CSS, el mismo nombre de la etiqueta (p, li, div, h1, table...)
 * **Selectores de id y class**  
 Apuntan a etiquetas con identificadores (id, class) de html.   
+
 **HTML**
 ```
 <div id="mild"></div> 
@@ -40,6 +41,13 @@ atributo2: valor;
 ```
 * Selectores de atributos
 * Selectores jerárquicos: Elementos hermanos, hijos, entre otros (tabla, tr, td)
+
+*Se puede agrupar selectores de la siguiente manera*
+```
+div, p, span, table{
+...
+}
+```
 
 ### Sintaxis
 
