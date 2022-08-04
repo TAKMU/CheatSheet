@@ -57,3 +57,5 @@ propiedad: valor;
 propiedad2: valor;
 }
 ```
+### Modelo de caja
+Margen, borde relleno, contenido
