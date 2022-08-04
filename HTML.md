@@ -256,7 +256,9 @@ Definition list es lista para definiciones (parecido a un diccionario)
 ```
   
   </details>
-#### Listas desplegables
+#### Otros tipos de entrada
+<details>
+#####  Listas desplegables
 
 <details>
   
@@ -273,7 +275,7 @@ Lista desplegable
 
 </details>
 
-#### Area de texto
+##### Area de texto
 <details>
   
 ```
@@ -282,5 +284,21 @@ Lista desplegable
   </textarea>
 ```
 </details>
+</details>
 
+#### Navegación (links agrupados)
+<details>
+ Conjunto de ligas agrupadas.
+```
+  <nav>
+    <ul>
+      <li>Inicio</li>
+      <li>Enlaces</li>
+      <li>Descargas</li>
+      <li>Sobre mi</li>
+      <li>Contacto</li>
+    </ul>
+  </nav>
+```
+</details>
   </details>
