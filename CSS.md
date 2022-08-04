@@ -15,3 +15,18 @@ Maneras de insertar estilos:
 ```
 <link rel="stylesheet" type="text/css" href="URL">
 ```
+
+Selector, conjunto de reglas utilizadas para apuntar a uno o varios elementos de un documento HTML  
+* Selectores de elementos
+* Selectores de id y class
+* Selectores de atributos
+* Selectores jerárquicos: Elementos hermanos, hijos, entre otros (tabla, tr, td)
+
+### Sintaxis
+
+```
+selector {
+propiedad: valor;
+propiedad2: valor;
+}
+```
