@@ -59,3 +59,23 @@ propiedad2: valor;
 ```
 ### Modelo de caja
 Margen, borde relleno, contenido
+
+#### Padding
+Margen interior (Por manecillas de reloj, empezando del superior)
+```
+<div id="cajita"></div>
+<style>
+  #cajita{
+  padding: 10px 5px 10px 5px;
+  }
+  /*Iguales en funcion*/
+  .gik{
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  }
+</style>
+```
+#### Padding
+Margen interior al elemento con relleno. 
