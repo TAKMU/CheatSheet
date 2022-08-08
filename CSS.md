@@ -305,3 +305,29 @@ Definen estilo, grosor, color y redondeo del borde.
   }
 </style>
 ```
+    
+### Background  
+    
+<details>
+      
+    Cambia la imagen de fondo  
+  
+      ```
+      background-image: url(ruta)
+      background-size: 100px, 100px;
+      //ancho y alto
+      ```
+      
+</details>
+
+### Capas  
+    
+<details>
+      
+    Mayor sea el número, se coloca adelante 
+  
+      ```
+      z-index: 1;
+      ```
+      
+</details>
