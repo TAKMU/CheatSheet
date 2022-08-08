@@ -77,5 +77,66 @@ Margen interior (Por manecillas de reloj, empezando del superior)
   }
 </style>
 ```
-#### Padding
-Margen interior al elemento con relleno. 
+#### Margin
+Margen exterior al elemento con relleno.
+```
+<div id="cajita"></div>
+<style>
+  #cajita{
+  margin: 10px 5px 10px 5px;
+  }
+  /*Iguales en funcion*/
+  .gik{
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  }
+</style>
+```
+#### Border
+Definen estilo, grosor, color y redondeo del borde.
+```
+<div id="cajita"></div>
+<style>
+  #cajita{
+  //
+  border-style: dotted;
+  //puntos
+  border-style: dashed;
+  //punteado (lineas)
+  border-style: rished;
+  //3D estriado
+  border-style: inset;
+  //efecto botón 3D
+  border-style: solid;
+  //continuo
+  border-style: outset;
+  //efecto botón 3D
+  border-style: double;
+  //doble linea
+  border-style: hidden;
+  //oculto
+  border-style: groove;
+  //3D acanalado
+  border-style: none;
+  //sin borde
+  //puede colocar diferentes estilos por lado, igual como margen arriba y manecillas de reloj
+  border-width: 2px;
+  //puede colocar el ancho del borde al mismo tiempo.
+  border-color: red;
+  //puede colocar el color del borde al mismo tiempo.
+  border-radius: 10px;
+  //redondeo del borde, se puede hacer el borde al mismo tiempo, empezando de campo superior derecho. 
+  border: 10px solid red;
+  /*Especifica todos los puntos grosor, estilo y color*/
+  }
+  /*Iguales en funcion*/
+  .gik{
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  }
+</style>
+```
