@@ -19,8 +19,29 @@
 Selector, conjunto de reglas utilizadas para apuntar a uno o varios elementos de un documento HTML  
 * **Selectores de elementos**
 Apuntan a etiquetas HTML, apuntan a etiquetas en CSS, el mismo nombre de la etiqueta (p, li, div, h1, table...)
+<details>
+  
+**HTML**
+```
+  <h1>Prueba</h1>
+  <div>
+    <p>Se va a modificar esta sección</p>
+    <span></span>
+    <table></table>
+  </div>
+```
+**CSS**
+```
+div, p, span, table{
+...
+}
+```
+</details>
+
 * **Selectores de id y class**  
-Apuntan a etiquetas con identificadores (id, class) de html.   
+Apuntan a etiquetas con identificadores (id, class) de html. 
+
+<details>
 
 **HTML**
 ```
@@ -38,16 +59,160 @@ atributo2: valor;
 atributo1: valor;
 atributo2: valor;
 }
-```
-* Selectores de atributos
-* Selectores jerárquicos: Elementos hermanos, hijos, entre otros (tabla, tr, td)
 
-*Se puede agrupar selectores de la siguiente manera*
 ```
-div, p, span, table{
-...
+</details>
+
+* **Selectores de atributos**
+Apuntan a etiquetas con ciertos atributos o valores de los atributos. 
+<details>
+
+**HTML**
+```
+<a title="titulo">
+
+<img title="flor sd">
+
+<img title="flor gam">
+
+<img title="hola-1">
+
+<img title="hola-2">
+
+<img title="holatres">
+
+<img title="primeravez">
+
+<img title="segundavez">
+
+<img title="otravez">
+```
+**CSS**
+```
+#mild{
+a[title]{
+//Apunta al atributo title de la etiqueta a.
+
+[title="titulo"]{
+//valor de su atributo es titulo.
+}
+
+a[title="titulo"]{
+//valor de su atributo es titulo y tiene la etiqueta a.
+}
+
+[title~="flor"]{
+//Selecciona las etiquetas que contienen flor como palabra
+} 
+[title|="hola"]{
+//Toma hola-1 hola-2, holatres no lo toma, porque no considera la palabra.
+//Primera palabra
+}
+[title^="hola"]{
+//Toma hola-1, hola-2 y holatres 
+//Primera valor específico
+}
+[title$="vez"]{
+//Toma hola-1, hola-2 y holatres 
+//Terminen con un valor específico, todos los que terminan en vez.
+}
+[title*="ol"]{
+//Toma hola-1, hola-2 y holatres 
+//Contienen el valor en específico, no una palabra.
 }
 ```
+  
+</details>
+
+* **Selectores jerárquicos**
+Apuntan a elementos HTML con jerarquía: descendientes, hijo, hermano adyacente y general de hermano (como tablas: tr y td(descendientes), td hijo de td,  
+hermano adyacente tr y tr, entre otros.
+  
+  <details>
+
+#### Descendientes
+<details>
+  
+Toma a los elementos que se encuentren dentro de la etiqueta.  
+  **HTML**
+```
+<div>
+  <div><p></p></div>
+  <span><p></p><p></p></span>
+ <div>
+   <p>Este no</p>
+```
+**CSS**
+```
+div p{
+   //toma los elementos p que tienen un div como antecesor
+   }
+```
+</details>
+  
+#### Hijos
+<details>
+  
+Toma a los elementos que prosiguen inmediatamente del padre 
+  **HTML**
+```
+<div>
+  <div><p>Solo este elemento</p></div>
+  <span><p>No</p><p>NO</p></span>
+ <div>
+   <p>Este no</p>
+```
+**CSS**
+```
+div > p{
+   //toma los elementos p que tienen un div como padre
+   }
+```
+</details>
+
+#### Hermano adyacente
+  <details>
+  
+Toma a los elementos que están de manera inmediata a su hermano 
+  **HTML**
+```
+<div>
+  <div><p>NO</p></div>
+  <span><p>No</p><p>NO</p></span>
+ <div>
+ <p>Este SI </p>
+ <p>Este no</p>
+```
+**CSS**
+```
+div + p{
+   //toma los elementos p que tienen antes un div. 
+   }
+```
+</details>
+  
+#### Hermano (general)
+  <details>
+  
+Toma a los elementos que están al mismo nivel
+  **HTML**
+```
+<div>
+  <div><p>Solo este elemento</p></div>
+  <span><p>No</p><p>NO</p></span>
+ <div>
+ <p>Este si</p>
+```
+**CSS**
+```
+div ~ p{
+   //toma los elementos p que tienen antes un div. 
+   }
+```
+</details>
+   </details>
+
+
 
 ### Sintaxis
 
