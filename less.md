@@ -128,7 +128,9 @@ Cambiar de color, funciones matemáticas ya definidas. Puedes restar, sumar, mul
 ```
 </details>
 
-###Estilos anidados
+### Estilos anidados
+Puede generar estilos anidados, uno dentro de otro
+<details>
 
 ```
 ul{
@@ -144,3 +146,36 @@ ul{
 }
 
 ```
+  
+  
+### Alcance
+Primero revisa las variables locales, y luego revisa si las variables existen en jerarquías más altas. 
+<details>
+
+```
+@var: red;
+  ul{
+    @var: white;
+    li{
+        color: @var;
+    }
+}
+
+```
+
+En este caso toma el color blanco.
+  
+  ```
+@var: red;
+  ul{
+    li{
+        color: @var;
+    }
+    @var: white;
+}
+
+```
+  
+  Sigue tomando el color blanco.
+  
+</details>
