@@ -104,6 +104,7 @@ Cambiar de color, funciones matemáticas ya definidas. Puedes restar, sumar, mul
 <details>
   
 ```
+
   #caja1{
     float: left;
     width: 200px + 100px;
@@ -126,3 +127,20 @@ Cambiar de color, funciones matemáticas ya definidas. Puedes restar, sumar, mul
 }
 ```
 </details>
+
+###Estilos anidados
+
+```
+ul{
+    .caja(250px, 250px, left, #FFF, hidden);
+    .borde(2px, solid, #111AAA, 50px);
+    .sombra(-25px 25px 25px #AAAAAA);
+    margin: 10px;
+    li{
+        font-size: 20px;
+        font-weight: 600;
+        margin: 10px;
+    }
+}
+
+```
