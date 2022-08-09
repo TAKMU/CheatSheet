@@ -4,6 +4,18 @@ https://lesscss.org/
 Less, preprocesador de CSS. El código less se utiliza un compilador y lo convierte a CSS.  
 Se utiliza variables. Less utiliza menos líneas para más.  
 
+**Descargar less para node.js**
+
+```
+npm install less -g
+```
+
+**Para compilar el estilo**
+
+```
+lessc estilos.less estilos.css
+```
+
 ### Variables
 Se utiliza con @variable : valor;
 
