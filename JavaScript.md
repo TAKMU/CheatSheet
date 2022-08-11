@@ -133,5 +133,24 @@ Partes que forman una URL
     replace: cambia el url por otro
   </details>
   
-  
 </details>
+
+## DOM (Document Object Model)
+Modelos de objetos del documento. Estructura de objetos que genera el navegador, se puede modificar con JS o jQuery. Abarca desde el navegador hasta los documentos (también etiquetas de html). Acceso directo a una página web. 
+
+
+## DOM (Document Object Model)
+Metodos para obtener elementos
+
+getElementByTagName
+    document.getElementByTagName("nombre_etiqueta")[indice];
+    document.getElementByTagName("div")[2];
+    //tercer elemento div
+    
+getElementByName
+    document.getElementByName("nombre_atributo");
+    document.getElementByTagName("edad");
+    
+getElementById
+    document.getElementById("atributo_id");
+    document.getElementByTagName("principal");
