@@ -139,18 +139,165 @@ Partes que forman una URL
 Modelos de objetos del documento. Estructura de objetos que genera el navegador, se puede modificar con JS o jQuery. Abarca desde el navegador hasta los documentos (también etiquetas de html). Acceso directo a una página web. 
 
 
-## DOM (Document Object Model)
-Metodos para obtener elementos
+## Obtener elementos de la pagina web
+<details>
 
-getElementByTagName
+Metodos para obtener elementos  
+
+getElementByTagName  
+```
     document.getElementByTagName("nombre_etiqueta")[indice];
     document.getElementByTagName("div")[2];
-    //tercer elemento div
-    
-getElementByName
+    //tercer elemento div  
+```
+   
+getElementByName 
+```
     document.getElementByName("nombre_atributo");
     document.getElementByTagName("edad");
+```
     
-getElementById
-    document.getElementById("atributo_id");
-    document.getElementByTagName("principal");
+firstElementChild
+```
+  <ul id="lista">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+    var lista=document.getElementById("lista");
+    lista.firstElementChild;
+```
+lastElementChild  
+```
+  <ul id="lista">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+    var lista=document.getElementById("lista");
+    lista.lastElementChild;
+```
+</details>
+
+## Crear elementos de la pagina web
+<details>
+
+Metodos para crear elementos  
+
+createElement 
+```
+    document.createElement("nombre_etiqueta");
+    var div= document.createElement("div");
+```
+    
+createTextNode
+```
+    document.createTextNode("texto_plano");
+    var texto= document.createTextNode("creando elementos");
+```
+
+appendChild  
+```
+    var div= document.createElement("div");
+    var texto= document.createTextNode("creando elementos");
+    div.appendChild(texto);
+    document.body.appendChilrd(div);
+```
+</details>
+
+## Eliminar elementos de la pagina web
+<details>
+
+Metodos para eliminar elementos  
+
+removeChild
+```
+  <div id="unico"></div>
+  var div= document.getbyElementId("unico");
+  document.body.removeChild(div);
+
+```
+</details>
+
+## Obtener elemento padre de la pagina web
+<details>
+
+Metodos para obtener elemento padre, para evitar realizar ciclos para buscar el elemento y eliminarlo con removeChild
+
+parentNode
+```
+  <div id="unico"></div>
+  var div= document.getbyElementId("unico");
+  div.parentNode.removeChild(div);
+
+```
+</details>
+
+## Eventos
+### Ratón
+<details>
+  
+* onclick (boton izquierdo)
+* ondbclick (doble boton izquierdo)
+  
+```
+  <div onclick/ondbclick="unafuncion()"></div>
+```
+* onmousedown (mientras se presiona cualquier boton de mouse)
+* onmouseup (si se retira el boton del mouse)
+  
+```
+  <div onmousedown/onmouseup="unafuncion()"></div>
+```
+* onmouseout (mientras sale del elemento, mouse)
+* onmouseover (si se pone el apuntador en el elemento)
+  
+```
+  <div onmouseout/onmouseover="unafuncion()"></div>
+```
+</details>
+
+### Teclado
+<details>
+  
+* onkeydown (Si la tecla se presioan)
+* onkeypress (mientras la tecla esté presionada)
+* onkeyup (si deja de presionarse la tecla)
+  
+```
+  <div onkeydown/onkeypress/onkeyup="unafuncion()"></div>
+```
+
+</details>
+
+### HTML
+<details>
+  
+* onkeydown (Si la tecla se presioan)
+* onkeypress (mientras la tecla esté presionada)
+* onkeyup (si deja de presionarse la tecla)
+  
+```
+  <div onkeydown/onkeypress/onkeyup="unafuncion()"></div>
+```
+* onload: cuando el documento haya cargado totalmente
+* onselect: cuando un trozo de texto es seleccionado.
+* onchange: se pierde el foco cuando el texto sea modificado. 
+* on submit: presionar el boton para enviar un formulario
+* on resize: se redimensiona la pantalla del navegador
+* onfocus: cuando estás enfocando a una entrada. 
+
+```
+ object.onfocus = function(){myScript}; 
+  //or
+  <input type="text" id="fname" onfocus="myFunction()">
+  <script>
+    function myFunction() {
+      document.getElementById("fname").style.backgroundColor = "red";
+    }
+  </script>
+}
+```
+</details>
