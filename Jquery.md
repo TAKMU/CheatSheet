@@ -38,11 +38,18 @@ Se utiliza *$("selector")
 [!]elementos que no tengan el valor exacto. 
 * Formularios
 
-## Eventos y tipos
-**Objeto event**  
+## Objeto event
 Se utiliza el objeto evento, para pasar el evento a unas funciones como parametro para ampliar el rango de métodos y propiedades.  
 #().click(function(event){metodo y propiedades});  
+Hay varias propiedades:  
+* which: regresa el código de la tecla pulsada. 
+* clientX: regresa las coordenadas del puntero en x (considerando la izquierda como 0)
+* clientY: regresa las coordenadas del puntero en y (considerando la parte superior como 0)
+Hay varios métodos:  
+* preventDefault: evita que se ejecute una acción asociada al evento (evitar enviar la información del formulario atravéz del botón submit).
+* preventPropagation: evita que se propague o se escuche la acción de un elemento a otro (padre-hijo).  
 
+## Eventos y tipos
 
 Pulsación del teclado, entre otros  
 *$("selector").evento(function(){});*
@@ -80,7 +87,11 @@ val, obtuene el valor del atributo value del elemento
 attr, asigna o se obtiene el atributo del elemento html seleccionado
 removeAttr, remueve el atributo del elemento html seleccionado
 * dentro
+append: inserta al final, dentro del elemento seleccionado. 
+preppend: inserta al inicio, dentro del elemento seleccionado. 
 * antes o despues
+after: 
+before:
 * muestran u ocultan
 * CSS
 * text
