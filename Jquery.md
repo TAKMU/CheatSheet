@@ -1,4 +1,6 @@
 # JQuery
+Documentación: 
+https://api.jquery.com/
 Modificar elementos html y crear elementos.  
 Biblioteca de JS, simplicando elementos de html del DOM, gestionar eventos, manipular hojas de estilos CSS, crear efectos o animaciones, con AJAX, obtener elementos del servidor.
 
@@ -36,7 +38,13 @@ Se utiliza *$("selector")
 [\*atributos] todos los atributos que contengan la subcadena indicada  
 [$]atributos especificos que contengan al final la subcadena indicada  
 [!]elementos que no tengan el valor exacto. 
-* Formularios
+* Formularios  
+\:text: apunta a todo texto del folmulario  
+\:password: apunta a todos los elementos de tipo password.  
+\:submit: apunta a todos los elementos de tipo submit.   
+\:radio : apunta a todos los elementos de tipo radio.  
+\:checkbox: apunta a todos los elementos de tipo checkbox.  
+\:checked: apunta a todos los elementos checados (checkbox).  
 
 ## Objeto event
 Se utiliza el objeto evento, para pasar el evento a unas funciones como parametro para ampliar el rango de métodos y propiedades.  
@@ -90,11 +98,21 @@ removeAttr, remueve el atributo del elemento html seleccionado
 append: inserta al final, dentro del elemento seleccionado. 
 preppend: inserta al inicio, dentro del elemento seleccionado. 
 * antes o despues
-after: 
-before:
+after: después del elemento
+before: antes del elemento 
 * muestran u ocultan
+hide: oculta elemento seleccionado.  
+show: muestra elemento/elementos seleccionados.  
+slideDown: muestras con elemento de deslizado.  
+slideUp: ocultas con elemento de deslizamiento.  
+slideToggle: muestras u ocultas elementos con efecto de deslizamiento.   
 * CSS
-* text
+* text: 
+* formulario:
+submit: detecta cuando se presiona el botón de formulario.   
+select: cuando se selecciona un texto.  
+focus: cuando un elemento toma el foco.   
+blur: cuando un elemento pierde el foco  
 
 **$(selector).css()**
 ```
@@ -105,7 +123,6 @@ var estilo= $(selector).css();
 ```
 $(selector).css("color", "red");
 $(selector).css({"color": "red", "font-size": "14px"});
-
 
 ### ready
 Modelo de objeto esté listo. Evita que se ejecuten funciones y fallen antes de que se cargue el documento DOM.
