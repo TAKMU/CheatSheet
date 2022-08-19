@@ -16,7 +16,42 @@ Y se utiliza los siguientes comandos para acceder por Visual Studio Code.
 cd my-app
 code .
 ```
-## el:
+## Vue2
+Se adjunta el código de la siguiente manera: 
+```
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<!-- production version, optimized for size and speed -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+```
+La sintaxis del código es la siguiente: 
+CSS
+```
+<div id="app">
+  {{ message }}
+</div>
+```
+JS
+```
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+*Nota: No se puede instanciar un vue para la etiqueta html o body*
+se hace una instancia de vue por cada elemento, y tiene ciertos elementos:
+* **el:**  
 Propiedad que elige el selector (css)
-## data:
-Propiedad en donde se guardan los datos que se utilizarán en el código. 
+* **data:**  
+Propiedad en donde se guardan los datos que se utilizarán en el elemento, instancia.  
+Se guardan los datos de la siguiente manera:
+  * **string**: 'string'
+  * **boleano**: true|false
+  * **array**: []
+  * **objeto**: {nombreAtributo: valor, nombreAtributo2: valor}
+ 
+* **{{$variable}}**  
+Se reemplaza el valor sea por el valor de la variable o el resultado de una función. 
+## Vue3
