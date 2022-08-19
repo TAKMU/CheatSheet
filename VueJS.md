@@ -54,4 +54,40 @@ Se guardan los datos de la siguiente manera:
  
 * **{{$variable}}**  
 Se reemplaza el valor sea por el valor de la variable o el resultado de una función. 
+### Métodos
+Reacciona a los eventos, se puede representar los eventos como v-on o como @. También se puede mezclar los métodos con Jquery.  
+html
+```
+<p v-on:click="nuevoMensaje">{{mensaje}}</p>
+/*o
+<p @click="nuevoMensaje">{{mensaje}}</p>
+*/
+```
+JS
+```
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }, 
+  methods: {
+    nuevoMensaje: function(){
+      this.mensaje = 'Perfecto! ya ves que es muy fácil.';
+    }
+  }
+})
+```
+### Directivas
+v-model se une los valores de un formulario o input. Asociando valores a la clabe de manera reactiva. 
+<input v-model="mensaje" class="prueba">
+JS
+```
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Cambia el mensaje';
+  }
+})
+```
+
 ## Vue3
