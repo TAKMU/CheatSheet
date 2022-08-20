@@ -78,6 +78,9 @@ var app = new Vue({
 })
 ```
 ### Directivas
+<details>
+  
+#### v-model
 v-model se une los valores de un formulario o input. Asociando valores a la clabe de manera reactiva. 
 <input v-model="mensaje" class="prueba">
 JS
@@ -89,5 +92,63 @@ var app = new Vue({
   }
 })
 ```
-
+#### v-show
+v-show permite mostrar u ocultar el elemento en el que se encuentra. 
+```
+<main>
+<div @click="ok=!ok"> Pulsa para alternar </div>
+<div v-look="ok" class="animated bounceInLeft"> Ahora soy visible</div>
+```
+#### v-if
+v-if elimina la etiqueta en la que se encuentra.
+```
+<div v-if="mensaje" class="animated rollIn"> La condición se cumple</div>
+```
+#### v-else
+v-else necesita de v-if, para poder utilizarse. Funciona como else. 
+```
+<div v-if="mensaje" class="animated rollIn"> La condición se cumple</div>
+<div v-else class="animated rollIn"> La condición no se cumple</div>
+```
+#### v-else-if
+v-else necesita de v-if, para poder utilizarse. Funciona como elseif. Nueva opción. 
+```
+<div v-if="mensaje === 'A'" class="animated rollIn"> La letra es A</div>
+<div v-elseif="mensaje === 'B'" class="animated rollIn"> La letra es B</div>
+<div v-else class="animated rollIn">No es A ni B</div>
+```
+#### v-for
+v-for es para iterar, realizar un ciclo. Este caso es para arreglos.
+```
+  <ul>
+  <li v-for="ciudad in ciudades" class="animated rollIn"> {{ciudad.nombre}}</li>
+  </ul>
+```
+Para objetos es:
+```
+  <ul>
+  <li v-for="dato in datosUsuarios" class="animated rollIn"> {{dato}}</li>
+  </ul>
+```
+Para mostrar la llave y el valor
+```
+  <ul>
+    <li v-for="(value, key) in datosUsuarios" class="animated rollIn"> <b>{{key}}:</b> {{value}}</li>
+  </ul>
+```
+#### v-text y v-html
+Ingresará el valor del argumento dentro de la etiqueta. La diferencia, es que en html, se puede incorporar etiquetas html. 
+```
+  <div v-text="mensaje1"></div>
+  <div v-html="mensaje2"></div>
+```
+#### v-bind
+Asociar un atributo o etiqueta html con una expresión. Puedes cambiar de clase como en la línea 3 (considerando que tienes un estilo anterior. 
+```
+  <div v-bind:title="mensaje"> Colocate encima para mostrar su titulo </div>
+  <div :title="mensaje">Es lo mismo, pero simplificado </div>
+  <div :class="{rojo:claseRojo, borde:nuevoBorde} @click="claseRojo=!claseRojo"></div>
+```
+</details>
+  
 ## Vue3
