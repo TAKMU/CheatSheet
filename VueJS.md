@@ -150,5 +150,10 @@ Asociar un atributo o etiqueta html con una expresión. Puedes cambiar de clase 
   <div :class="{rojo:claseRojo, borde:nuevoBorde} @click="claseRojo=!claseRojo"></div>
 ```
 </details>
-  
+
+###Componentes
+Los componentes son pedazos de código encapsulado con su propia lógica.
+```
+```
+                                                                               ```
 ## Vue3
