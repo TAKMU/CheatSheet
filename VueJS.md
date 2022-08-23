@@ -151,9 +151,148 @@ Asociar un atributo o etiqueta html con una expresión. Puedes cambiar de clase 
 ```
 </details>
 
-###Componentes
-Los componentes son pedazos de código encapsulado con su propia lógica.
+### Componentes
+Los componentes son pedazos de código encapsulado con su propia lógica.  
+Solo se puede agregar un elemento padre o root, es decir, no se pueden tener 2 elementos de mismo nivel si no están dentro de otro elemento. Para colocar varios varias etiquetas, es necesario colocar acento invertido `. 
+Es necesario separar template, data, 
+vue.js
 ```
+Vue.component('mi-componente',{
+   template: `<div>
+                <h1>COMPONENTES</h1>
+                <b>Esto es un componente.</p>
+                <p>Y lo puedo utilizar tantas veces como quiere</p>
+             </div>`,
+   data: function(){
+                     return{
+                      nuevoTexto:'Este es un nuevo texto';
+                     }
+                   }
+});
 ```
-                                                                               ```
+HTML
+```
+<mi-componente></mi-componente>
+```
+Otra manera de realizar platillas, es con un script en HTML y se especifica la plantilla en vue:
+HTML
+```
+<script type="text/template" id="plantilla">
+           <div>
+                <h1>COMPONENTES</h1>
+                <b>Esto es un componente.</p>
+                <p>Y lo puedo utilizar tantas veces como quiere</p>
+           </div>
+</script>
+```
+vue.js
+```
+Vue.component('mi-componente',{
+   template: `#plantilla`,
+   data: function(){
+                     return{
+                      nuevoTexto:'Este es un nuevo texto';
+                     }
+                   }
+});
+```
+Otra manera de realizar platillas, es con un script en HTML y se especifica la plantilla en vue:
+HTML
+```
+<template id="plantilla">
+           <div>
+                <h1>COMPONENTES</h1>
+                <b>Esto es un componente.</p>
+                <p>Y lo puedo utilizar tantas veces como quiere</p>
+           </div>                
+</template>
+```
+vue.js
+```
+Vue.component('mi-componente',{
+   template: `#plantilla`,
+   data: function(){
+                     return{
+                      nuevoTexto:'Este es un nuevo texto';
+                     }
+                   }
+});
+```
+Otra manera de realizar plantillas, es en una etiqueta "nueva", colocando el atributo inline-template.  
+HTML
+```
+<plantilla inline-template>
+           <div>
+                <h1>COMPONENTES</h1>
+                <b>Esto es un componente.</p>
+                <p>Y lo puedo utilizar tantas veces como quiere</p>
+           </div>                
+</plantilla>
+```
+vue.js
+```
+Vue.component('mi-componente',{
+   template: `#plantilla`,
+   data: function(){
+                     return{
+                      nuevoTexto:'Este es un nuevo texto';
+                     }
+                   }
+});
+```                        
+#### Props 
+Para reconocer datos para que el template pueda reconocerlos.  
+Vue.js
+```
+vue.component('libro', {
+  props: ['titulo', 'autor'], 
+  template: 
+`<h1>
+    <a :href="url">{{titulo}}</a>
+    {{autor}}
+</h1>`,
+})
+new Vue({
+  el:'main',
+  data: {
+    elTitulo: 'Quien se ha comido mi queso',
+    elAutor: 'Spencer Johnson',
+    laUrl: 'https://es.wikipedia.org/wiki/%C2%BFQui%C3%A9n_se_ha_llevado_mi_queso%3F',
+  },
+})
+```
+HTML
+```
+<libro :titulo="elTitulo" :autor="elAutor" :url="laUrl"></libro>
+
+```
+#### Slots
+Se utiliza para reemplazar un valor con otro en un componente, en dado caso que haya más de un slot, se le coloca atributo name="nombreSlot".
+vue.js
+```
+Vue.component('advertencia', {
+  props: ['mensaje'],
+    template:
+       `<div>
+         <slot name="aviso">AVISO</slot>
+         <slots>{{mensaje}}</slots>
+        </div>`,
+})
+
+new Vue({
+  el:'main',
+  data: {
+    advertencia: 'Los cambios se han guardado con exito'
+  },
+})
+```
+HTML
+```
+<advertencia class="advertencia" :mensaje:"advertencia">
+  <template slot="aviso">¡Cuidado!</template>
+  <template>Error al conectar a la base de datos</template>
+</advertencia>
+```
+#### Transición
+
 ## Vue3
