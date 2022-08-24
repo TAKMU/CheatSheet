@@ -294,5 +294,115 @@ HTML
 </advertencia>
 ```
 #### Transición
+Aparece o desaparece de la pantalla. Hay 6 clases de entrada/salida, la inserción del elemento es como la siguiente imagen:
+![imagen](https://user-images.githubusercontent.com/25917401/186492083-978ac37d-3a30-488b-b762-c7d0184fcf82.png)
+* v-enter
+* v-enter-actove
+* v-enter-to
+* v-leave
+* v-leave-active
+* v-leave-to
 
+       
+               
+* **Simple manera de realizar transición.**  
+HTML
+```
+<div id="selector">
+  <button v-on:click="mostrar = !mostrar">Haz click</button>
+  <transition v-on:click="fade">
+   <p v-if="mostrar">Transición simple</p>
+  </transition>
+</div>
+```
+CSS
+```
+.fade-enter-active, .fade-leave-active{
+  opacity: 1;
+  transition-duration: .5s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0; 
+}
+```
+* **Explicando cada parte de la animación.** 
+HTML
+```
+<div id="selector">
+  <button v-on:click="mostrar = !mostrar">Haz click</button>
+  <transition v-on:click="mi-trans">
+   <p v-if="mostrar">Transición simple</p>
+  </transition>
+</div>
+```
+CSS
+```
+.mi-trans-enter-active{
+  background-color: #000;
+  opacity: 0;
+  margin-left: -500px;
+} 
+.mi-trans-enter-to{
+  background-color: #eee;
+  opacity: 1; 
+  transition-duration: 2s;
+  margin-left: 0px;
+}
+.mi-trans-leave-active{
+  background-color: #eee;
+  opacity: 1;
+  transition-duration: 2s;
+}
+.mi-trans-leave-to{
+  background-color: #000;
+  opacity: 0; 
+  margin-left: -500px;
+}
+```
+* **Realizas transiciones simples con transition, CSS**
+HTML
+```
+<div id="selector">
+  <button v-on:click="mostrar = !mostrar">Haz click</button>
+  <transition v-on:click="mi-trans">
+   <p v-if="mostrar">Transición simple</p>
+  </transition>
+</div>
+```
+CSS
+```
+.mi-trans-enter-active{
+  animation: mi-animacion .5s;
+} 
+.mi-trans-leave-active{
+  animation: mi-animacion .5s reverse
+}
+@keyframes mi-animacion{
+  0%{
+    transform: scale(0);
+    background-color: #000;
+    opacity: 0;
+  }
+ 50%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+    background-color: #DE0000;
+    opacity: 1;
+  }
+}
+
+```
+* **Realizando transiciones personalizadas:** Se utiliza los mismos tipos pero al final se le agrega -classes. 
+```
+<!-- assuming Animate.css is included on the page -->
+<Transition
+  name="custom-classes"
+  enter-active-class="animate__animated animate__tada"
+  leave-active-class="animate__animated animate__bounceOutRight"
+>
+  <p v-if="show">hello</p>
+</Transition>
+```
 ## Vue3
