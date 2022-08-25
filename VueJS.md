@@ -405,4 +405,55 @@ CSS
   <p v-if="show">hello</p>
 </Transition>
 ```
+#### Filtros:
+Se pueden usar filtros para los textos y números en interpolaciones ({{}}), o atravéz de v-line.   
+Vue.js
+```
+// Global
+Vue.filter('capitalizer', function (value){
+  if(!value) return ''
+  value=value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)                 
+})
+//local
+el:'main',
+data:{...},
+filters:{
+          mayusculas: function(value){
+            if(!value) return ''
+            value = value.toString()
+            return value.toUpperCase()       
+          }
+        }          
+```
+HTML
+```
+<main>
+  <p>{{texto | mayusculas}}</p>
+  <p>{{texto | capitalize}}</p>
+</main>
+```
+#### Tareas computadas
+Serie de acciones, son serie de funciones para evitar muchas funciones, con la diferencia de que se guarda en cache. A menos que no haya cambios, no se realizará el proceso. Y las funciones deben de realizarse de nuevo. 
+vue.js
+```
+var vm = new VUe({
+  el: 'main',
+  data: {
+    mensaje: 'Mensaje invertido'
+  },
+  computed: {
+    mensajeInvertido(){
+      return this.mensaje.split('').reverse().join('')
+    }
+  }
+})
+```
+HTML
+```
+<p>{{mensajeInvertido}}</p>
+```
+#### Axios
+Tiene el objetivo de realizar peticiones http.  
+https://github.com/axios/axios
 ## Vue3
